@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawableTextView">
+        <!--drawable跟随文本居中-->
+        <attr name="enableCenterDrawables" format="boolean" />
+        <!--默认情况下文字与图片共同居中，开启后文字在最中间，图片紧挨-->
+        <attr name="enableTextInCenter" format="boolean" />
+        <!--TextView的startDrawable的宽度-->
+        <attr name="drawableStartWidth" format="dimension" />
+        <!--TextView的startDrawable高度-->
+        <!--默认情况下文字与图片共同居中，开启后文字在最中间，图片紧挨-->
+        <attr name="drawableStartHeight" format="dimension" />
+        <attr name="drawableTopWidth" format="dimension" />
+        <attr name="drawableTopHeight" format="dimension" />
+        <attr name="drawableEndWidth" format="dimension" />
+        <attr name="drawableEndHeight" format="dimension" />
+        <attr name="drawableBottomWidth" format="dimension" />
+        <attr name="drawableBottomHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingButton">
+        <!--设置加载时收缩-->
+        <attr name="enableShrink" format="boolean" />
+        <!--设置加载时禁用点击-->
+        <attr name="disableClickOnLoading" format="boolean" />
+        <!--设置加载结束时恢复文字-->
+        <attr name="restoreTextWhenEnd" format="boolean" />
+        <!--收缩动画时间-->
+        <attr name="shrinkDuration" format="integer" />
+        <!--设置LaodingDrawable和EndDrawable大小-->
+        <attr name="loadingEndDrawableSize" format="dimension" />
+        <!--设置progressbar的宽度-->
+        <attr name="loadingStokeWidth" format="dimension" />
+        <!--设置Loading的颜色-->
+        <attr name="loadingDrawableColor" format="color" />
+        <!--设置Loading的位置-->
+        <attr name="loadingDrawablePosition" format="enum">
+            <enum name="Start" value="0" />
+            <enum name="Top" value="1" />
+            <enum name="End" value="2" />
+            <enum name="Bottom" value="3" />
+        </attr>
+        <!--完成时显示的图标-->
+        <attr name="endCompleteDrawable" format="reference" />
+        <!--失败时显示的图标-->
+        <attr name="endFailDrawable" format="reference" />
+        <!--完成或失败图标从无到有的时间-->
+        <attr name="endDrawableAppearTime" format="integer" />
+        <!--完成或失败图标停留的时间-->
+        <attr name="endDrawableDuration" format="integer" />
+    </declare-styleable>
+</resources>
