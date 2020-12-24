@@ -30,8 +30,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation project(path: ':tui')
 
-
+    implementation 'com.tuyrt:permissionimpl:1.0.7'
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-    implementation project(path: ':permission')
+
 }

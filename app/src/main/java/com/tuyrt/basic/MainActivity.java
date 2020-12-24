@@ -5,6 +5,8 @@ import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setGrayDecorView();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadingBtn = findViewById(R.id.loadingBtn);
@@ -71,5 +75,18 @@ public class MainActivity extends AppCompatActivity {
     public void goPermission(View view) {
         startActivity(new Intent(this, PermissionActivity.class));
 
+    }
+
+    /**
+     第二种方案： 通过硬件绘制会调用的API，view.setLayerType(layerType,null);直接在BaseActivity中获取decorView
+     对象，然后设置硬件绘制灰色调 （依赖硬件加速，）
+     */
+    private void setGrayDecorView() {
+        //
+        Paint mPaint = new Paint();
+        ColorMatrix cm = new ColorMatrix();
+        cm.setSaturation(0);
+        mPaint.setColorFilter(new ColorMatrixColorFilter(cm));
+        getWindow().getDecorView().setLayerType(View.LAYER_TYPE_HARDWARE,mPaint);
     }
 }

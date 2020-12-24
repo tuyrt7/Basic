@@ -17,18 +17,21 @@ public class TLog {
     }
 
     public static void v(Object... message) {
-        if (OPEN_LOG)
+        if (OPEN_LOG) {
             log(Log.VERBOSE, formatMessage(message));
+        }
     }
 
     public static void d(Object... message) {
-        if (OPEN_LOG)
+        if (OPEN_LOG) {
             log(Log.DEBUG, formatMessage(message));
+        }
     }
 
     public static void i(Object... message) {
-        if (OPEN_LOG)
+        if (OPEN_LOG) {
             log(Log.INFO, formatMessage(message));
+        }
     }
 
     public static void w(Object... message) {
@@ -101,8 +104,9 @@ public class TLog {
     //******************************************************************************************
 
     private static String objToString(Object obj, int currentLvel) {
-        if (obj == null)
+        if (obj == null) {
             return "null";
+        }
         currentLvel++;
         StringBuilder sb = new StringBuilder();
         if (obj instanceof String) {//字符串

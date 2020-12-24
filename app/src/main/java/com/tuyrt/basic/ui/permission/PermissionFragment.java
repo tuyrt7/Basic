@@ -35,8 +35,8 @@ public class PermissionFragment extends Fragment {
     }
 
     private void check(View view) {
-        PermissionImpl.newPermission()
-                .fragment(this)
+        PermissionImpl
+                .init(this)
                 .permission(per)
                 .requestPermission(new AdapterPermissionListener(){
                     @Override

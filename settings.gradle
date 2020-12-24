@@ -1,2 +1,2 @@
-include ':app', ':tui', ':permission'
+include ':app', ':tui'
 rootProject.name='Basic'
