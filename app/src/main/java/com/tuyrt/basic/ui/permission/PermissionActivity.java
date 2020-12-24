@@ -37,8 +37,7 @@ public class PermissionActivity extends AppCompatActivity {
 
     //申请权限
     private void applyPermission() {
-        PermissionImpl.newPermission()
-                .activity(this)
+        PermissionImpl.init(this)
                 .permission(per)
                 .isRejectNoCancelDialog(true)
                 .requestPermission(new AdapterPermissionListener() {
