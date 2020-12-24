@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
 
-    <com.bayair.doctor.grayscale.GrayImageView
+    <com.tuyrt.basic.func.grayscale.GrayImageView
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
@@ -24,7 +24,7 @@
         android:textSize="30sp"
         />
 
-    <com.bayair.doctor.grayscale.GrayTextView
+    <com.tuyrt.basic.func.grayscale.GrayTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
@@ -42,7 +42,7 @@
         android:textSize="30sp"
         />
 
-    <com.bayair.doctor.grayscale.GrayButton
+    <com.tuyrt.basic.func.grayscale.GrayButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
